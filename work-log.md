@@ -11,6 +11,25 @@
 
 ## 2026-08-21
 
+### main 브랜치 통합 및 기본 브랜치 전환
+
+작업 내용:
+
+- `docs/project-baseline`의 전체 기준선 커밋을 기반으로 로컬/원격 `main` 브랜치를 생성했습니다.
+- GitHub `himangga01/short-video-service`의 기본 브랜치를 `docs/project-baseline`에서 `main`으로 변경했습니다.
+- 기존 `docs/project-baseline` 브랜치는 삭제 요청이 없어 보존했습니다.
+
+검증:
+
+- 사용자 요청 범위에 따라 Git 브랜치, 원격 commit, GitHub 기본 브랜치만 확인했습니다.
+- 테스트, lint, build는 실행하지 않았습니다.
+
+AI / Developer Notes:
+
+- Integration result: all baseline commits are present on `main`.
+- Default branch: `main`.
+- Source branch retained: `docs/project-baseline`.
+
 ### 전체 작업 이력 통합 및 Git 기준선 정리
 
 지금까지 완료한 작업:
