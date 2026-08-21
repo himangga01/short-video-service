@@ -33,7 +33,7 @@
 - 이 로그에 지금까지의 구현 내역과 남은 작업을 통합 기록했습니다.
 - `.env`, 로컬 DB, uploads, `node_modules`, build 결과, 로그가 `.gitignore`로 제외되는 것을 확인했습니다.
 - 아직 커밋이 없는 `master`에서 게시용 `docs/project-baseline` 브랜치를 생성했습니다.
-- 저장소에 원격 remote가 설정되어 있지 않아 push 대상 설정이 필요한 상태입니다.
+- GitHub `https://github.com/himangga01/short-video-service.git`을 `origin`으로 연결하고 `docs/project-baseline` 브랜치를 push했습니다.
 
 ### 남은 작업
 
@@ -69,7 +69,7 @@ AI / Developer Notes:
 - Completed baseline: project/scene CRUD, media upload lifecycle, Gemini TTS, readiness validation, preview/playback, async FFmpeg render, cleanup, dark editor shell, and backend regression-test harness.
 - Immediate fixes: hash-guard stale TTS failures and preserve terminal render-job state.
 - UX priorities: responsive shell/toolbar, operation-specific status, valid bulk-TTS preconditions, and accessible form/file-upload controls.
-- Git branch: `docs/project-baseline`; no remote is configured yet.
+- Git branch: `docs/project-baseline`; remote: `origin/docs/project-baseline`.
 
 ## 2026-05-10
 
