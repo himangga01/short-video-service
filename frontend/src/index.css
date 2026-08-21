@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --editor-bg: #05070b;
+  --editor-bg-rgb: 5, 7, 11;
+  --editor-surface: #0b111a;
+  --editor-surface-rgb: 11, 17, 26;
+  --editor-surface-2: #101822;
+  --editor-surface-3: #151f2e;
+  --editor-border: #263244;
+  --editor-border-strong: #3a4a62;
+  --editor-text: #e8eef8;
+  --editor-muted: #9aa8ba;
+  --editor-subtle: #6f7d90;
+  --editor-accent: #27d7ff;
+  --editor-accent-2: #4f7cff;
+  --editor-success: #32d583;
+  --editor-warning: #f5b84b;
+  --editor-danger: #ff6b6b;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 30% -10%, rgba(39, 215, 255, 0.16), transparent 34rem),
+    radial-gradient(circle at 100% 0%, rgba(79, 124, 255, 0.13), transparent 28rem),
+    linear-gradient(135deg, #030407 0%, var(--editor-bg) 42%, #080d14 100%);
+  color: var(--editor-text);
+}
+
+.editor-dark {
+  background:
+    radial-gradient(circle at 58% 0%, rgba(39, 215, 255, 0.08), transparent 34rem),
+    linear-gradient(180deg, #05070b 0%, #070a10 100%);
+  color: var(--editor-text);
+}
+
+.editor-dark header {
+  background: rgba(var(--editor-surface-rgb), 0.92) !important;
+  border-color: var(--editor-border) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04), 0 18px 36px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(16px);
+}
+
+.editor-dark aside {
+  background:
+    linear-gradient(180deg, rgba(14, 21, 32, 0.96), rgba(8, 12, 19, 0.98)) !important;
+  border-color: var(--editor-border) !important;
+}
+
+.editor-dark main {
+  background:
+    radial-gradient(circle at center top, rgba(39, 215, 255, 0.08), transparent 24rem),
+    linear-gradient(180deg, #080c12, #05070b 58%) !important;
+}
+
+.editor-dark .bg-white {
+  background-color: rgba(var(--editor-surface-rgb), 0.94) !important;
+}
+
+.editor-dark .bg-gray-50 {
+  background-color: rgba(16, 24, 34, 0.88) !important;
+}
+
+.editor-dark .bg-gray-100 {
+  background-color: rgba(22, 31, 45, 0.92) !important;
+}
+
+.editor-dark .bg-blue-50 {
+  background-color: rgba(39, 215, 255, 0.1) !important;
+}
+
+.editor-dark .bg-green-50,
+.editor-dark .bg-emerald-50,
+.editor-dark .bg-emerald-100 {
+  background-color: rgba(50, 213, 131, 0.12) !important;
+}
+
+.editor-dark .bg-yellow-100,
+.editor-dark .bg-amber-50,
+.editor-dark .bg-amber-100 {
+  background-color: rgba(245, 184, 75, 0.13) !important;
+}
+
+.editor-dark .bg-red-50 {
+  background-color: rgba(255, 107, 107, 0.12) !important;
+}
+
+.editor-dark .bg-gray-900 {
+  background-color: #05070b !important;
+}
+
+.editor-dark .bg-blue-600,
+.editor-dark .bg-indigo-600 {
+  background: linear-gradient(135deg, var(--editor-accent-2), #6b5cff) !important;
+  box-shadow: 0 10px 28px rgba(79, 124, 255, 0.24);
+}
+
+.editor-dark .bg-green-600 {
+  background: linear-gradient(135deg, #16a36d, var(--editor-success)) !important;
+  box-shadow: 0 10px 26px rgba(50, 213, 131, 0.22);
+}
+
+.editor-dark .bg-blue-500 {
+  background: linear-gradient(90deg, var(--editor-accent), var(--editor-accent-2)) !important;
+}
+
+.editor-dark .bg-amber-900 {
+  background: linear-gradient(135deg, #b7791f, var(--editor-warning)) !important;
+  color: #080c12 !important;
+}
+
+.editor-dark .hover\:bg-gray-50:hover,
+.editor-dark .hover\:bg-gray-100:hover,
+.editor-dark .hover\:bg-blue-50:hover {
+  background-color: rgba(39, 215, 255, 0.1) !important;
+}
+
+.editor-dark .hover\:bg-blue-700:hover,
+.editor-dark .hover\:bg-indigo-700:hover {
+  filter: brightness(1.12);
+}
+
+.editor-dark .hover\:bg-green-700:hover {
+  filter: brightness(1.1);
+}
+
+.editor-dark .border-gray-200,
+.editor-dark .border-gray-300,
+.editor-dark .border-gray-800,
+.editor-dark .border-blue-200,
+.editor-dark .border-amber-200,
+.editor-dark .border-green-200,
+.editor-dark .border-emerald-200,
+.editor-dark .border-red-200 {
+  border-color: var(--editor-border) !important;
+}
+
+.editor-dark .border-blue-500 {
+  border-color: var(--editor-accent) !important;
+}
+
+.editor-dark .text-gray-950,
+.editor-dark .text-gray-900,
+.editor-dark .text-gray-800,
+.editor-dark .text-gray-700 {
+  color: var(--editor-text) !important;
+}
+
+.editor-dark .text-gray-600,
+.editor-dark .text-gray-500,
+.editor-dark .text-gray-400 {
+  color: var(--editor-muted) !important;
+}
+
+.editor-dark .text-blue-600,
+.editor-dark .text-blue-700 {
+  color: var(--editor-accent) !important;
+}
+
+.editor-dark .text-green-700,
+.editor-dark .text-green-800,
+.editor-dark .text-emerald-700,
+.editor-dark .text-emerald-900 {
+  color: var(--editor-success) !important;
+}
+
+.editor-dark .text-yellow-700,
+.editor-dark .text-amber-700,
+.editor-dark .text-amber-800,
+.editor-dark .text-amber-900,
+.editor-dark .text-amber-950 {
+  color: var(--editor-warning) !important;
+}
+
+.editor-dark .text-red-600,
+.editor-dark .text-red-700 {
+  color: var(--editor-danger) !important;
+}
+
+.editor-dark input:not([type='range']):not([type='color']),
+.editor-dark textarea,
+.editor-dark select {
+  background-color: rgba(5, 9, 15, 0.86) !important;
+  border-color: var(--editor-border-strong) !important;
+  color: var(--editor-text) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.editor-dark input::placeholder,
+.editor-dark textarea::placeholder {
+  color: var(--editor-subtle) !important;
+}
+
+.editor-dark input:focus,
+.editor-dark textarea:focus,
+.editor-dark select:focus {
+  border-color: var(--editor-accent) !important;
+  box-shadow: 0 0 0 3px rgba(39, 215, 255, 0.18) !important;
+}
+
+.editor-dark input[type='range'] {
+  accent-color: var(--editor-accent);
+}
+
+.editor-dark .shadow-sm,
+.editor-dark .shadow-md,
+.editor-dark .shadow-lg,
+.editor-dark .shadow-2xl {
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+.editor-dark .ring-green-400 {
+  --tw-ring-color: rgba(50, 213, 131, 0.68) !important;
+}
+
+.editor-dark ::selection {
+  background: rgba(39, 215, 255, 0.3);
+  color: white;
+}
+
+.editor-dark * {
+  scrollbar-color: var(--editor-border-strong) transparent;
+}
+
+.editor-dark ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.editor-dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2a374a, #1a2433);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+}
+
+.editor-dark ::-webkit-scrollbar-track {
+  background: transparent;
+}
