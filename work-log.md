@@ -11,6 +11,30 @@
 
 ## 2026-08-21
 
+### 다른 PC 작업 인수인계 문서 재정비
+
+작업 내용:
+
+- `HANDOFF.md`를 추가해 저장소 clone, 환경변수, 의존성 설치, migration, 개발 서버 실행, 기존 SQLite/미디어 이전, 다음 작업 순서를 한 문서에 정리했습니다.
+- `로컬개발환경_설정가이드.md`에 남아 있던 React 18, Tailwind 3, 미사용 라이브러리와 예전 API 주소 예시를 제거하고 실제 package/env/API 구성 기준으로 전면 갱신했습니다.
+- `README.md`에 다른 PC 시작 절차와 `HANDOFF.md`, 최신 로컬 개발환경 가이드 링크를 추가했습니다.
+- `backend/.env`, `frontend/.env`, `backend/data`, `backend/uploads`가 Git clone으로 복원되지 않는다는 점과 기존 작업 데이터를 별도 이전하는 절차를 명시했습니다.
+- 다른 PC의 `node_modules`를 복사하지 않고 두 package의 lockfile을 기준으로 각각 `npm ci`를 실행하도록 정리했습니다.
+- 현재 우선 작업인 stale TTS 실패 경합, render terminal 상태, 반응형 편집기, 저장 상태, bulk TTS, 접근성 문제를 인수인계 문서에 기록했습니다.
+- 문서 변경은 `docs/cross-pc-handoff` 브랜치에서 작성한 뒤 `main`에 반영하는 흐름으로 진행했습니다.
+
+검증:
+
+- 현재 `package.json`, `.env.example`, API base URL, SQLite/upload 경로와 문서 내용을 대조했습니다.
+- 사용자 지침에 따라 테스트, lint, build는 실행하지 않았습니다.
+
+AI / Developer Notes:
+
+- Added canonical cross-machine handoff: `HANDOFF.md`.
+- Replaced stale local setup examples with the current React 19, Vite 7, Tailwind 4, Express 5, SQLite, Gemini TTS, and FFmpeg setup.
+- Explicitly documented non-Git state: secrets, SQLite DB, and generated media.
+- Source of truth remains the remote `main` branch.
+
 ### main 브랜치 통합 및 기본 브랜치 전환
 
 작업 내용:

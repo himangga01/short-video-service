@@ -71,9 +71,23 @@ ssul-maker/
 │   │   ├── services/         # Gemini TTS, FFmpeg 렌더
 │   │   └── app.js            # Express 서버
 │   └── test/                 # Backend 회귀 테스트
+├── HANDOFF.md                # 다른 PC 작업 인수인계
 ├── IMPLEMENTATION_PLAN.md    # 단계별 구현 계획
 └── work-log.md               # 작업 이력과 남은 작업
 ```
+
+## 다른 PC에서 이어가기
+
+다른 PC에서는 `main`을 기준으로 저장소를 받습니다.
+
+```powershell
+git clone https://github.com/himangga01/short-video-service.git
+cd short-video-service
+git switch main
+git pull --ff-only origin main
+```
+
+설치·환경변수·로컬 DB/미디어 이전·현재 남은 작업은 [HANDOFF.md](./HANDOFF.md)를 따릅니다. Git에는 소스와 문서만 저장되며 `backend/.env`, `frontend/.env`, `backend/data`, `backend/uploads`는 새 PC에 자동으로 복원되지 않습니다.
 
 ## 로컬 실행
 
@@ -81,7 +95,7 @@ ssul-maker/
 
 ```powershell
 cd backend
-npm install
+npm ci
 Copy-Item .env.example .env
 npm run migrate
 npm run dev
@@ -110,7 +124,7 @@ Backend 기본 주소는 `http://localhost:3001`이며 상태 확인은 `GET /he
 
 ```powershell
 cd frontend
-npm install
+npm ci
 npm run dev
 ```
 
@@ -203,6 +217,8 @@ GET    /api/render/jobs/:jobId
 
 ## 문서
 
+- [HANDOFF.md](./HANDOFF.md): 다른 PC 인수인계, 로컬 데이터 이전, 다음 작업 순서
+- [로컬개발환경_설정가이드.md](./로컬개발환경_설정가이드.md): 현재 코드 기준 설치와 실행 방법
 - [IMPLEMENTATION_PLAN.md](./IMPLEMENTATION_PLAN.md): 전체 구현 및 개선 계획
 - [TESTING.md](./TESTING.md): 테스트와 검증 방법
 - [UX_UI_기능설명서.md](./UX_UI_기능설명서.md): 편집기 UX 기능 설명
@@ -225,6 +241,7 @@ GET    /api/render/jobs/:jobId
 - Gemini TTS returns PCM audio that is converted to MP3 through FFmpeg.
 - Render requests create jobs first and expose polling-based progress.
 - The current UI uses a three-column dark editor shell with project list, workspace/timeline, and scene inspector.
+- Cross-PC setup and non-Git state transfer are documented in `HANDOFF.md`.
 
 ### Immediate Engineering Priorities
 
